@@ -1,49 +1,82 @@
 <template>
-    <div class="height-full main-header">
-        <div class="main-bg" :style="backgroundDiv">
-
+    <div>
+        <pub-header></pub-header>
+        <div id="main_bg">
+            <li>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+                <ul>111</ul>
+            </li>
         </div>
+
     </div>
 </template>
 
 <script>
+    import PubHeader from "../../components/PubHeader";
     export default {
-        name: "index",
-        data(){
-            return{
-                backgroundDiv: {
-                    background:'url(' + require('../../assets/bg-002.png') + ') 50% 50% / cover no-repeat rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
+        components: { //定义组件
+            PubHeader
+        },
     }
 </script>
 
 <style scoped>
-    .main-header{
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-
-    }
-    .main-bg{
-        width: calc(100vw + 40px);
-        height: 100%;
-        overflow: hidden;
-        z-index: 10;
-        margin-left: -20px;
-        position: absolute;
-        transition: transform .2s;
-        --percentage: 0;
-        transform: translateX(calc(var(--percentage)*20px));
-    }
-    .height-full {
-        height: calc(100vh - 60px);
-    }
-    @media screen and (max-width: 1200px){
-        .height-full {
-            height: 50vh;
-        }
-    }
 
 </style>

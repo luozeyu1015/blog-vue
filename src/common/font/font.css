@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Aawrm';
+    src: url('Aawrm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ywfzt';
+    src: url("FZZH-YWCMTJW.TTF") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fzytt';
+    src: url("FZZH-YTTJW.TTF") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

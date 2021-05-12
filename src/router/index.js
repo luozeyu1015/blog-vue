@@ -5,24 +5,41 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-
 export const constantRoutes = [
     {
         path: '/',
-        component: Layout,
-        redirect: '/home'
+        component: resolve => require(['../views/home'], resolve),
+        name:'Home'
     },
     {
-        path: '/home',
-        component: Layout,
-        redirect: '/home/index',
-        children: [
-            {
-                path: 'index',
-                component: () => import('@/views/home'),
-                name: 'Home'
-            },
-        ]
+        path: '/Home',
+        component: resolve => require(['../views/home'], resolve),
+        name: 'Home'
+    },
+    {
+        path:'/Paper',
+        component: resolve => require(['../views/paper'], resolve),
+        name: 'Paper'
+    },
+    {
+        path:'/Amusement',
+        component: resolve => require(['../views/amusement'], resolve),
+        name: 'Amusement'
+    },
+    {
+        path:'/Production',
+        component: resolve => require(['../views/production'], resolve),
+        name: 'Production'
+    },
+    {
+        path:'/Message',
+        component: resolve => require(['../views/message'], resolve),
+        name: 'Message'
+    },
+    {
+        path:'/About',
+        component: resolve => require(['../views/about'], resolve),
+        name: 'About'
     }
 ]
 
@@ -50,7 +67,33 @@ export const asyncRoutes = [
 
 const createRouter = () => new Router({
     // mode: 'history', // require service support
-    scrollBehavior: () => ({ y: 0 }),
+        scrollBehavior(to) { // 在点击浏览器的“前进/后退”，或者切换导航的时候触发。
+            if (to.hash){
+                console.log(to.hash)
+                return {
+                    selector: to.hash,
+                    behavior: 'smooth',
+                }
+            }
+            // if (savePosition) {
+            //     return savePosition;
+            // } else {
+            //     return {
+            //         x:0,
+            //         y:100
+            //     }
+            //     // var top;
+            //     // if (window.innerWidth >= 700) {
+            //     //     top = 676
+            //     // } else {
+            //     //     top = 267
+            //     // }
+            //     // return {
+            //     //     x: 0,
+            //     //     y: top
+            //     // }
+            // }
+        },
     routes: constantRoutes
 })
 
